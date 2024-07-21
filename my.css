@@ -11,7 +11,11 @@
     font-weight: bold;
 }
 
-
+.iframe
+{
+  width: 60%;
+  height: 150px;
+}
 
 .carousel {
   position: relative;
@@ -26,6 +30,11 @@
   height: auto;
   opacity: 0;
   transition: opacity 1s ease-in-out;
+}
+
+.menu2
+{
+  display: hidden;
 }
 
 .carousel-image.active {
@@ -367,8 +376,9 @@ nav button#page4btn:hover {
 
 #page2
 {
-  inline-size:99vw;
+  inline-size:98vw;
   block-size:80vh;
+  height:  900px;
 }
 
 #page1{height: 1200px;}
@@ -508,3 +518,98 @@ nav button#page4btn:hover {
     transform: translateY(-50%);
   }
 }
+
+.clock {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border: 20px solid black;
+  border-radius: 50%;
+  background: white;
+}
+
+.hand {
+  position: absolute;
+  width: 50%;
+  height: 6px;
+  background: black;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition-timing-function: steps(60);
+}
+
+.second-hand {
+  height: 2px;
+  background: red;
+  animation: rotate-second 60s linear infinite;
+}
+
+.minute-hand {
+  height: 4px;
+  background: black;
+  animation: rotate-minute 3600s linear infinite;
+}
+
+.hour-hand {
+  height: 6px;
+  background: black;
+  animation: rotate-hour 43200s linear infinite;
+}
+
+@keyframes rotate-second {
+  from {
+      transform: rotate(90deg);
+  }
+  to {
+      transform: rotate(450deg);
+  }
+}
+
+@keyframes rotate-minute {
+  from {
+      transform: rotate(90deg);
+  }
+  to {
+      transform: rotate(450deg);
+  }
+}
+
+@keyframes rotate-hour {
+  from {
+      transform: rotate(90deg);
+  }
+  to {
+      transform: rotate(450deg);
+  }
+}
+
+.center {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: black;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number {
+  position: absolute;
+  font-size: 24px;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.number1 { top: 0%; left: 50%; transform: translateX(-50%); }
+.number2 { top: 20%; left: 80%; transform: translateX(-50%); }
+.number3 { top: 50%; left: 85%; transform: translateY(-50%); }
+.number4 { top: 70%; left: 80%; transform: translateX(-50%); }
+.number5 { top: 90%; left: 50%; transform: translateX(-50%); }
+.number6 { top: 70%; left: 20%; transform: translateX(-50%); }
+.number7 { top: 50%; left: 5%; transform: translateY(-50%); }
+.number8 { top: 20%; left: 15%; transform: translateX(-50%); }
+
