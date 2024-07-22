@@ -32,6 +32,12 @@
   transition: opacity 1s ease-in-out;
 }
 
+img
+{
+  width: 50%;
+  height: 50%;
+}
+
 .menu2
 {
   display: hidden;
